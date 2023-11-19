@@ -1,0 +1,54 @@
+@import '../../sass/variables';
+
+
+.container_loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+    background-color: $color-white;
+    position: fixed;
+    z-index: 2;
+    flex-direction: column;
+    gap: 5vw;
+    .title_loader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.5vw;
+        text-align: center;
+        h1{
+            font-weight: bolder;
+            font-size: clamp(2rem, 5vw, 5rem);
+        }
+        h2{
+            font-weight: 200;
+            font-size: clamp(1.5rem, 2vw, 2rem);
+        }
+    }
+    
+    .progress__bar {
+        width: 350px;
+        max-width: 85vw;
+        height: 4px;
+        position: absolute;
+        bottom: 20vh;
+        left: 50%;
+        border-radius: 4px;
+        background: rgba(0, 0, 0, 0.2);
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        div{ 
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: $color-blue-dark;
+            animation: load 25s linear;
+        }
+    }
+}
+
+
